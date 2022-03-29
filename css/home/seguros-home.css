@@ -47,7 +47,7 @@
 }
 
 .seguros-plano-title > span::after {
-  content: "mensal";
+  content: 'mensal';
   display: block;
   color: var(--color-5);
   font-size: var(--size-12);
@@ -68,11 +68,11 @@
 }
 
 .seguros-plano-itens li::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 0.8125rem;
   height: 0.5625rem;
-  background-image: url(../../img/icons/lista.svg);
+  background-image: url(../img/icons/lista.svg);
   background-repeat: no-repeat;
 }
 

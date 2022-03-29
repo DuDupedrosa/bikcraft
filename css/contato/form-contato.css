@@ -42,7 +42,7 @@
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url(../../img/icons/icons-contato/local.svg);
+  background-image: url(../img/icons/icons-contato/local.svg);
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +67,7 @@
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url(../../img/icons/icons-contato/email.svg);
+  background-image: url(../img/icons/icons-contato/email.svg);
   position: absolute;
   top: 0;
   left: 0;
@@ -84,7 +84,7 @@
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url(../../img/icons/icons-contato/telefone.svg);
+  background-image: url(../img/icons/icons-contato/telefone.svg);
   position: absolute;
   top: 0;
   left: 0;

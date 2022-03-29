@@ -19,7 +19,7 @@
   width: 3.25rem;
   height: 3.25rem;
   background-repeat: no-repeat;
-  background-image: url(../../img/icons/details-sections/detail-to-bottom.svg);
+  background-image: url(../img/icons/details-sections/detail-to-bottom.svg);
   position: absolute;
   bottom: 8.75rem;
   left: -3.75rem;
@@ -102,11 +102,11 @@
 }
 
 .tecnologia-especificacoes li:first-child h3::before {
-  background-image: url(../../img/icons/eletrica.svg);
+  background-image: url(../img/icons/eletrica.svg);
 }
 
 .tecnologia-especificacoes li:last-child h3::before {
-  background-image: url(../../img/icons/rastreador.svg);
+  background-image: url(../img/icons/rastreador.svg);
 }
 
 .tecnologia-especificacoes p {

@@ -18,7 +18,7 @@
 
 /* estilos geral do icone de cada title */
 .seguros-vantagens-itens h3::before {
-  content: "";
+  content: '';
   display: block;
   width: 2rem;
   height: 2rem;
@@ -28,27 +28,27 @@
 
 /* cada ícone de acordo com seu title */
 .seguros-vantagens-itens li:nth-of-type(1) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/eletrica.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/eletrica.svg);
 }
 
 .seguros-vantagens-itens li:nth-of-type(2) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/carbono.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/carbono.svg);
 }
 
 .seguros-vantagens-itens li:nth-of-type(3) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/sustentavel.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/sustentavel.svg);
 }
 
 .seguros-vantagens-itens li:nth-of-type(4) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/rastreador.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/rastreador.svg);
 }
 
 .seguros-vantagens-itens li:nth-of-type(5) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/seguro.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/seguro.svg);
 }
 
 .seguros-vantagens-itens li:nth-of-type(6) h3::before {
-  background-image: url(../../img/icons/icons-vantagens-seguros/rastreador.svg);
+  background-image: url(../img/icons/icons-vantagens-seguros/rastreador.svg);
 }
 
 /* flutuação geral das caixas com as vantagens */

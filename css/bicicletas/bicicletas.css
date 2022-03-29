@@ -66,19 +66,19 @@
 
 /* ícone de acordo com o seu texto */
 .bicicletas ul li:nth-of-type(1)::before {
-  background-image: url(../../img/icons/bicicletas-especific/eletrica.svg);
+  background-image: url(../img/icons/bicicletas-especific/eletrica.svg);
 }
 
 .bicicletas ul li:nth-of-type(2)::before {
-  background-image: url(../../img/icons/bicicletas-especific/carbono.svg);
+  background-image: url(../img/icons/bicicletas-especific/carbono.svg);
 }
 
 .bicicletas ul li:nth-of-type(3)::before {
-  background-image: url(../../img/icons/bicicletas-especific/velocidade.svg);
+  background-image: url(../img/icons/bicicletas-especific/velocidade.svg);
 }
 
 .bicicletas ul li:nth-of-type(4)::before {
-  background-image: url(../../img/icons/bicicletas-especific/rastreador.svg);
+  background-image: url(../img/icons/bicicletas-especific/rastreador.svg);
 }
 
 /* estilos do button de mais informações da bicicleta */
@@ -98,7 +98,7 @@
   display: inline-block;
   width: 1.125rem;
   height: 0.625rem;
-  background-image: url(../../img/icons/arrow-right.svg);
+  background-image: url(../img/icons/arrow-right.svg);
   background-repeat: no-repeat;
   transition: 0.3s;
 }
@@ -145,7 +145,7 @@
   display: block;
   width: 3.25rem;
   height: 3.25rem;
-  background-image: url(../../img/icons/details-sections/detail-to-top.svg);
+  background-image: url(../img/icons/details-sections/detail-to-top.svg);
   background-repeat: no-repeat;
   position: absolute;
   z-index: 1;
