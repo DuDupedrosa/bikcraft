@@ -1,0 +1,213 @@
+/* introdução da section de bicicletas */
+.intro-bicicletas {
+  margin-bottom: 7.5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 3.75rem;
+}
+
+/* estilos gerais das caixas de bicicletas */
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* grid interno no conteúdo para facilitar o posicionamento
+   do button */
+.bicicletas-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* estilos do titulo de cada caixa */
+.bicicletas-content h2 {
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.bicicletas-content h2::before {
+  content: '';
+  display: block;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--color-11);
+}
+
+/* estilo do texto de cada section */
+.bicicletas-content p {
+  line-height: 1.33;
+  margin-bottom: 2rem;
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
+
+/* estilo dos itens da lista de características das bicicletas */
+.bicicletas-content ul li {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bicicletas-content ul li + li {
+  margin-top: 1rem;
+}
+
+/* estilo geral dos ícones */
+.bicicletas-content ul li::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+}
+
+/* ícone de acordo com o seu texto */
+.bicicletas ul li:nth-of-type(1)::before {
+  background-image: url(../../img/icons/bicicletas-especific/eletrica.svg);
+}
+
+.bicicletas ul li:nth-of-type(2)::before {
+  background-image: url(../../img/icons/bicicletas-especific/carbono.svg);
+}
+
+.bicicletas ul li:nth-of-type(3)::before {
+  background-image: url(../../img/icons/bicicletas-especific/velocidade.svg);
+}
+
+.bicicletas ul li:nth-of-type(4)::before {
+  background-image: url(../../img/icons/bicicletas-especific/rastreador.svg);
+}
+
+/* estilos do button de mais informações da bicicleta */
+.btn-more-information-bicicletas {
+  align-self: end;
+  justify-self: end;
+}
+
+.btn-more-information-bicicletas a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-more-information-bicicletas a::after {
+  content: '';
+  display: inline-block;
+  width: 1.125rem;
+  height: 0.625rem;
+  background-image: url(../../img/icons/arrow-right.svg);
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+/* tirando o hover padrão e colocando um outro especifico dessa section */
+.btn-more-information-bicicletas a:hover {
+  color: var(--color-12);
+}
+
+.btn-more-information-bicicletas a:hover::after {
+  transform: translate3d(1rem, 0, 0);
+}
+
+/* garantindo que a imagem acompanhe o row do conteúdo */
+.bicicletas-img img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  border-radius: 0.3125rem;
+}
+
+/* estilos para a etiqueta com o preço */
+.bicicletas-img {
+  position: relative;
+}
+
+.price-bicicletas {
+  background-color: var(--color-1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3125rem 0 0 0.3125rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+}
+
+/* gerando os estilos do detalhe de cada caixa de bicicletas
+   e quando chega em 460px que ele perde posição, ele é retirando */
+.bicicletas-content {
+  position: relative;
+}
+
+.bicicletas-content::before {
+  content: '';
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/icons/details-sections/detail-to-top.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+/* background específico de cada caixa de bicicleta que for par
+   assim geramos o estilo definido no design, sempre caixa par vai 
+   receber essa classe e seu background de separador */
+.bicicletas-bg {
+  padding: 3.75rem 0;
+  background: linear-gradient(to right, var(--color-8) 25%, var(--color-2) 25%);
+}
+
+/* parte do distanciamento das caixas sem bugar o background */
+.nimbus {
+  margin-bottom: 3.75rem;
+}
+
+.nebula {
+  margin-top: 3.75rem;
+  margin-bottom: 7.5rem;
+}
+
+/* estilos responsivo */
+@media (max-width: 60rem) {
+  .bicicletas {
+    /* quebra para um coluna */
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* redução da imagem para não afetar o estilo responsivo */
+  .bicicletas-img {
+    height: 18.75rem;
+  }
+
+  /* botando novamente o radius */
+  .bicicletas-img img {
+    border-radius: 0.3125rem;
+  }
+
+  /* retirando o linear-gradient e colocando de ponta a ponta */
+  .bicicletas-bg {
+    background: var(--color-2);
+  }
+}
+
+/* ultimo ponto de quebra, ajuste no posicionamento do button */
+@media (max-width: 28.75rem) {
+  .btn-more-information-bicicletas {
+    justify-self: start;
+    grid-column: 1 / -1;
+    margin-top: 1.5rem;
+  }
+
+  .price-bicicletas {
+    font-size: var(--size-16);
+  }
+
+  .bicicletas-content::before {
+    display: none;
+  }
+}

@@ -1,0 +1,125 @@
+/* caixa pai que segura a section de seguros da home */
+.seguros-home {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+/* estilo do titulo principal */
+.seguros-home h1 {
+  text-transform: lowercase;
+  padding-bottom: 6.25rem;
+}
+
+/* estilo geral das caixas de seguros utilizadas tanto
+   na home quanto na página específica de seguro, por isso
+   não especificamos tanto as classes, deixamos o mais global
+   possível, para poder refazer a utilização dos estilos, somente
+   das caixas de seguro */
+
+/* flutuação geral */
+.seguros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* estilo geral da caixa */
+.seguros-plano {
+  padding: 2rem 2rem 2rem 4rem;
+  border-radius: 0.3125rem;
+}
+
+/* estilos geral da caixa da primeira parte
+   ou seja os nome do plano e o preço */
+.seguros-plano-title {
+  display: flex;
+  padding-bottom: 2.5rem;
+  justify-content: space-between;
+}
+
+.seguros-plano-title h2 {
+  text-transform: uppercase;
+}
+
+.seguros-plano-title > span {
+  position: relative;
+}
+
+.seguros-plano-title > span::after {
+  content: "mensal";
+  display: block;
+  color: var(--color-5);
+  font-size: var(--size-12);
+  position: absolute;
+  right: 0;
+  bottom: -0.625rem;
+}
+
+/* estilos das especificações do plano, da lista */
+.seguros-plano-itens {
+  padding-bottom: 2rem;
+}
+
+.seguros-plano-itens li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seguros-plano-itens li::before {
+  content: "";
+  display: inline-block;
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-image: url(../../img/icons/lista.svg);
+  background-repeat: no-repeat;
+}
+
+.seguros-plano-itens li + li {
+  margin-top: 1.25rem;
+}
+
+/* estilo exclusivo do plano prata */
+.btn-plano-prata a {
+  background: var(--color-3);
+  color: var(--color-7);
+}
+
+/* aproveitando para não repetir código */
+.btn-plano-prata,
+.btn-plano-ouro {
+  padding-left: 1.3125rem;
+}
+
+.btn-plano-prata a:hover {
+  color: var(--color-11);
+}
+
+/* primeiro ponto de quebra, somente quebrando para uma coluna */
+@media (max-width: 50rem) {
+  .seguros {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* quebra padrão do site */
+@media (max-width: 37.5rem) {
+  .seguros-home h1 {
+    font-size: var(--size-48);
+  }
+}
+
+/* ultimo ponto de quebra, diminuição nos títulos 
+   e no padding geral da caixa */
+@media (max-width: 26.25rem) {
+  .seguros-plano-title h2,
+  .seguros-plano-title > span {
+    font-size: var(--size-24);
+  }
+
+  .seguros-plano {
+    padding: 2rem 1.25rem 2rem 1.25rem;
+    border-radius: 0.3125rem;
+  }
+}

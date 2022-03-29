@@ -1,0 +1,80 @@
+/* flutuação geral da intro */
+.intro-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* estilo da caixa que segura os textos e seu conteúdo */
+.intro-home-content {
+  align-self: center;
+  padding-bottom: 8.75rem;
+  position: relative;
+}
+
+.intro-home-content::before {
+  content: '';
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-repeat: no-repeat;
+  background-image: url(../../img/icons/details-sections/detail-to-bottom.svg);
+  position: absolute;
+  bottom: 3.75rem;
+  left: -6.25rem;
+}
+
+.intro-home-content h1 {
+  line-height: 1.125;
+  margin-bottom: 2rem;
+}
+
+.intro-home-content p {
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* box shadow gerado para fazer a ilusão
+   que a imagem esta estourando a caixa preta */
+.intro-home-bg {
+  box-shadow: inset 0 -7.5rem var(--color-8);
+  padding-top: 2rem;
+}
+
+.intro-home-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* estilos do responsivo quebra para uma coluna
+   e ajustes no posicionamento da imagem diminuindo
+   o height dela */
+@media (max-width: 50rem) {
+  .intro-home {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .intro-home-content {
+    align-self: center;
+    padding-bottom: 3.75rem;
+  }
+
+  .intro-home-img {
+    width: 100%;
+    height: 18.75rem;
+  }
+}
+
+/* ultimo ponto de quebra ajuste no tamanho
+   do título e do texto */
+@media (max-width: 37.5rem) {
+  .intro-home-content h1 {
+    font-size: var(--size-48);
+  }
+
+  .intro-home-content p {
+    font-size: var(--size-20);
+  }
+}

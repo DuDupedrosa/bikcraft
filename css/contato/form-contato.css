@@ -1,0 +1,174 @@
+/* caixa pai que gera o estilo do background que da ilusão
+   de que o form está estourando a caixa*/
+.contato-bg {
+  margin-bottom: 7.5rem;
+  box-shadow: inset 0 -16.25rem var(--color-17);
+}
+
+/* flutuação geral */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* background lojas online */
+.contato-lojas-online {
+  padding: 3.75rem;
+  border-radius: 0.3125rem 0 0 0.3125rem;
+}
+
+/* estilo da intro */
+.intro-contato {
+  padding: 3.75rem 1.25rem;
+}
+
+/* estilos do form parte de lojas online */
+.contato-lojas-online > span {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 3.75rem;
+}
+
+/* endereço */
+.contato-lojas-online-endereco {
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.contato-lojas-online-endereco::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../img/icons/icons-contato/local.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* email */
+.contato-lojas-online-email {
+  margin-bottom: 2rem;
+}
+
+.contato-lojas-online-email li + li {
+  margin-top: 0.4rem;
+}
+
+.contato-lojas-online-email {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.contato-lojas-online-email::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../img/icons/icons-contato/email.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* celular */
+.contato-lojas-online-celular {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.contato-lojas-online-celular::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../img/icons/icons-contato/telefone.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* redes sociais */
+.contato-lojas-online-socials {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding-left: 1.75rem;
+  padding-top: 3.75rem;
+}
+
+/* estilos do formulário */
+#contato {
+  padding: 3.75rem;
+  border-radius: 0 0.3125rem 0.3125rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-email-grid {
+  grid-column: 1 / -1;
+}
+
+.form-mensagem-grid {
+  grid-column: 1 / -1;
+}
+
+#contato label {
+  display: block;
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+}
+
+#contato input,
+#contato textarea {
+  background-color: var(--color-17);
+  border: 0.0625rem solid var(--color-15);
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  padding: 0.75rem;
+  width: 100% !important;
+}
+
+#contato button {
+  text-transform: uppercase;
+  background: linear-gradient(180deg, var(--color-9) 0%, var(--color-10) 100%);
+  box-shadow: 0px 0.0625rem 0.125rem var(--box-shadow-main);
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  max-width: max-content;
+  grid-column: 1 / -1;
+}
+
+/* quebra geral para uma coluna */
+@media (max-width: 50rem) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contato {
+    grid-row: 1;
+  }
+}
+
+/* ultimo ponto de quebra */
+@media (max-width: 28.75rem) {
+  #contato {
+    grid-template-columns: 1fr;
+    padding: 3.75rem 1.25rem;
+  }
+
+  #contato button {
+    padding: 1rem;
+    font-size: var(--size-16);
+  }
+
+  .contato-lojas-online {
+    padding: 3.75rem 1.25rem;
+  }
+}

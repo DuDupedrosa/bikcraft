@@ -1,0 +1,107 @@
+/* caixa que segura tudo e segura o background */
+.footer-bg {
+  padding-top: 3.75rem;
+  padding-bottom: 2rem;
+}
+
+/* estilos da primeira parte do footer */
+.footer-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.footer-intro-bg {
+  border-bottom: 0.125rem solid var(--color-5);
+}
+
+/* estilos do button que retorna para o topo da página */
+.footer-return-top a {
+  background-color: var(--color-8);
+  padding: 1rem;
+  border-radius: 0.3125rem;
+  transition: 0.3s;
+}
+
+.footer-return-top a:hover {
+  background-color: var(--color-11);
+}
+
+/* footer content flutuação interna */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+/* footer-contato e seus estilos */
+.footer-contato h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  margin-bottom: 2rem;
+}
+
+.footer-contato a {
+  display: block;
+  transition: 0.3s;
+}
+
+.footer-contato a:hover {
+  color: var(--color-8);
+}
+
+.footer-contato-email {
+  margin-bottom: 2.5rem;
+}
+
+.footer-estado {
+  display: block;
+}
+
+.footer-contato a {
+  padding: 0.4rem 0;
+}
+
+.footer-contato-social {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* footer-information e seus estilos */
+.footer-information h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  margin-bottom: 2rem;
+}
+
+.footer-information ul li a {
+  letter-spacing: 0.15rem;
+  transition: 0.3s;
+}
+
+.footer-information ul li a::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.1875rem;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.footer-information ul li a:hover::after {
+  background-color: var(--color-8);
+}
+
+/* quebra para uma coluna somente, na parte
+   do footer que tem conteúdo */
+@media (max-width: 37.5rem) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikcraft / Bicicletas elétricas</title>
+  <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente.">
+
+  <!-- metas-ogs -->
+  <meta property="og::title" content="Bikcraft / Bicicletas elétricas">
+  <meta property="og::description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente.">
+  <meta property="og:type" content="website">
+
+  <!-- fonts-externas poppins/roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+
+  <!-- links css / favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="background-17">
+  <header class="background-1" id="header">
+    <div class="container-main header">
+      <div class="header-logo" aria-label="Retornar para a home">
+        <a href="./index.html">
+          <img src="./img/icons/bikcraft.svg" alt="bikcraft / logo" width="136" height="32">
+        </a>
+      </div>
+      <nav aria-label="Navegação principal" data-menu="nav" class="nav-principal">
+        <div data-menu="button" aria-label="Clique para abrir o menu" class="menu-button">
+          <img src="./img/icons/icon-menu-mobile.svg" alt="Clique para abrir o menu" data-menu="icon">
+        </div>
+        <ul class="nav-itens" data-menu="list">
+          <li>
+            <a href="./bicicletas.html" class="color-8 weight-500 size-18 family-1">Bicicletas</a>
+          </li>
+          <li>
+            <a href="./seguros.html" class="color-8 weight-500 size-18 family-1">Seguros</a>
+          </li>
+          <li>
+            <a href="./contato.html" class="color-8 weight-500 size-18 family-1">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="background-2 contato-bg" aria-label="Contato bikcraft">
+
+    <div class="intro-geral container-main intro-contato">
+      <span class="color-6 family-2 weight-500 size-24">Respostas em até 24h</span>
+      <h1 class="color-8 family-1 weight-600 size-64">Nosso contato<span class="color-11">.</span></h1>
+    </div>
+
+    <div class="container-main contato-grid">
+      <div class="contato-lojas-online background-1" aria-label="Informações para contato">
+        <span class="color-8 family-1 weight-600 size-16">Loja online</span>
+        <p class="color-7 family-2 size-16 contato-lojas-online-endereco">
+          Rua Ali Perto, 35 <br>
+          Rio de Janeiro - RJ <br>
+          Brasil - Terra -Vila Láctea
+        </p>
+        <ul class="contato-lojas-online-email">
+          <li class="color-7 family-2 size-16">
+            vendas@bikcraft.com
+          </li>
+          <li class="color-7 family-2 size-16">
+            assistencia@bikcraft.com
+          </li>
+        </ul>
+        <div>
+          <a href="tel:+55 21 9999-9999" class="color-7 family-2 size-16 contato-lojas-online-celular">
+            +55 21 9999-9999
+          </a>
+          <ul class="contato-lojas-online-socials">
+            <li>
+              <a href="https://instagram.com" target="_blank">
+                <img src="./img/icons/icons-contato/instagram-p.svg" alt="instagram" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank">
+                <img src="./img/icons/icons-contato/facebook-p.svg" alt="facebook" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank">
+                <img src="./img/icons/icons-contato/youtube-p.svg" alt="youtube" width="32" height="32">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form action="/" id="contato" method="post" class="background-8" aria-label="Formulário de contato">
+        <div class="form-nome-grid">
+          <label for="name" class="color-1 family-1 weight-500 size-16">Nome</label>
+          <input type="text" name="name" id="name" class="color-18 family-2 size-16" placeholder="Seu nome" required>
+        </div>
+        <div class="form-tel-grid">
+          <label for="telefone" class="color-1 family-1 weight-500 size-16">Telefone</label>
+          <input type="text" name="phone-number" id="telefone" class="color-18 family-2 size-16" placeholder="(21) 9999-9999" required>
+        </div>
+        <div class="form-email-grid" data-box="input-email">
+          <label for="email" class="color-1 family-1 weight-500 size-16">Email</label>
+          <input type="email" name="email" id="email" class="color-18 family-2 size-16" placeholder="contato@email.com" required data-regexp="email">
+        </div>
+        <div class="form-mensagem-grid">
+          <label for="mensagem" class="color-1 family-1 weight-500 size-16">Mensagem</label>
+          <textarea rows="8" name="mensagem" id="mensagem" placeholder="O que você precisa?" class="color-1 family-1 weight-500 size-16"></textarea>
+        </div>
+        <button class="color-12 family-1 weight-600 size-18">Enviar mensagem</button>
+      </form>
+  </section>
+
+  <section class="container-main contato-lojas-locais" aria-label="Contato lojas">
+    <h2 class="color-2 family-1 size-64 contato-lojas-title">lojas locais<span class="color-11">.</span></h2>
+    <div class="contato-lojas-grid">
+      <div class="contato-lojas" aria-label="Contato lojas /  Rio de Janeiro">
+        <a href="https://www.google.com.br/maps" target="_blank" class="contato-lojas-img" aria-label="Endereço do Rio de Janeiro">
+          <div>
+            <img src="./img/contato-mapas/rio.jpg" alt="Mapa Rio de Janeiro" width="1120" height="520">
+          </div>
+        </a>
+        <h3 class="color-1 family-1 bold size-32">Rio de Janeiro</h3>
+        <div class="contato-lojas-endereco">
+          <span class="color-4 family-2 size-16">
+            Rua ali perto, 25 <br>
+            Rio de janeiro -RJ
+          </span>
+        </div>
+        <div class="contato-lojas-informacoes">
+          <span class="color-4 family-2 size-16">rio@bikcraft.com</span>
+          <span class="color-4 family-2 size-16">21 9999-9999</span>
+        </div>
+        <div class="contato-lojas-funcionamento" data-funcionamento-Rj="dados" data-semana="1,2,3,4,5,6" data-hora="8,18">
+          <span class="color-1 family-1 bold size-14" data-funcionamento-Rj="user">08-18h de seg à sab</span>
+        </div>
+      </div>
+      <div class="contato-lojas" aria-label="Contato lojas /  São Paulo">
+        <a href="https://www.google.com.br/maps" target="_blank" class="contato-lojas-img" aria-label="Endereço de São paulo">
+          <div>
+            <img src="./img/contato-mapas/sp.jpg" alt="Mapa São paulo" width="1120" height="520">
+          </div>
+        </a>
+        <h3 class="color-1 family-1 bold size-32">São Paulo</h3>
+        <div class="contato-lojas-endereco">
+          <span class="color-4 family-2 size-16">
+            Rua ali perto, 25 <br>
+            São Paulo - SP
+          </span>
+        </div>
+        <div class="contato-lojas-informacoes">
+          <span class="color-4 family-2 size-16">sp@bikcraft.com</span>
+          <span class="color-4 family-2 size-16">11 9999-9999</span>
+        </div>
+        <div class="contato-lojas-funcionamento" data-funcionamento-Sp="dados" data-semana="1,2,3,4,5,6" data-hora="8,18">
+          <span class="color-1 family-1 bold size-14" data-funcionamento-Sp="user">08-18h de seg à sab</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="background-1 footer-bg">
+    <div class="footer">
+      <div class="footer-intro-bg">
+        <div class="footer-intro container-main">
+          <div class="footer-logo">
+            <a href="./index.html">
+              <img src="./img/icons/bikcraft.svg" alt="bikcraft / logo" width="136" height="32">
+            </a>
+          </div>
+          <div class="footer-return-top">
+            <a href="#header" aria-label="Clique para retornar para o topo da página" data-anima="scroll-suave-top">
+              <img src="./img/icons/arrow-footer.svg" alt="arrow topo" width="23" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content container-main">
+        <div class="footer-contato">
+          <h2 class="color-8 family-2 weight-500 size-24">Contato</h2>
+          <a href="tel:+55 21 9999-9999" class="color-6 size-18 family-2" target="_blank">+55 21 9999-9999</a>
+          <a href="mailto:contato@bikcraft.com" class="color-6 size-18 family-2 footer-contato-email" target="_blank">contato@bikcraft.com</a>
+          <a href="https://www.google.com.br/maps" class="color-6 size-18 family-2" target="_blank">Rua Ali Perto, 42 - Botafogo
+            <span class="footer-estado">Rio de Janeiro - RJ</span></a>
+          <ul class="footer-contato-social">
+            <li>
+              <a href="https://instagram.com" target="_blank">
+                <img src="./img/icons/redes-sociais/instagram.svg" alt="instagram" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <img src="./img/icons/redes-sociais/facebook.svg" alt="facebook" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank">
+                <img src="./img/icons/redes-sociais/youtube.svg" alt="youtube" width="32" height="32">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-information ">
+          <h2 class="color-8 family-2 weight-500 size-24">Informações</h2>
+          <ul>
+            <li>
+              <a href="./bicicletas.html" class="color-6 size-18 family-2">Bicicletas</a>
+            </li>
+            <li>
+              <a href="./seguros.html" class="color-6 size-18 family-2">Seguros</a>
+            </li>
+            <li>
+              <a href="./contato.html" class="color-6 size-18 family-2">Contato</a>
+            </li>
+            <li>
+              <a href="./termos.html" class="color-6 size-18 family-2">Termos e Condições</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="direitos container-main">
+      <p class="color-6 size-18 family-2"> Bikcrafaft © Alguns direitos reservados</p>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>

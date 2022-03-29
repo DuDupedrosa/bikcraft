@@ -1,0 +1,160 @@
+/* caixa pai */
+.parceiros {
+  margin-bottom: 3.75rem;
+}
+
+/* titulo principal */
+.parceiros h1 {
+  text-transform: lowercase;
+  margin-bottom: 3.75rem;
+  line-height: 1.125;
+}
+
+/* container específica dessa section de parceiros */
+.parceiros-itens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+/* display grid em cada li para conseguir a centralização
+   ao centro mas sem quebrar as dimensões para poder gerar
+   os separadores através do border de cada caixa ou seja
+   alinhamos os items ao centro mas sem mexer nas proporções
+   da coluna principal desse item, mantendo todos eles
+   com o mesmo tamanho de coluna e facilitando assim, o 
+   alinhamento das bordas futuramente  */
+.parceiros-itens li {
+  display: grid;
+  justify-items: center;
+  padding: 0 1.25rem;
+}
+
+/* estilo de cada li com o seu separador, sempre
+   criado o separador com o border e dando o padding
+   para conseguir o alinhamento em relação ao border
+   de acordo com o design */
+.parceiros-itens li:nth-of-type(1) {
+  border-bottom: 0.125rem solid var(--color-15);
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(2) {
+  border-left: 0.125rem solid var(--color-15);
+  border-right: 0.125rem solid var(--color-15);
+  border-bottom: 0.125rem solid var(--color-15);
+  padding-top: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(3) {
+  border-right: 0.125rem solid var(--color-15);
+  border-bottom: 0.125rem solid var(--color-15);
+  padding-top: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(4) {
+  border-bottom: 0.125rem solid var(--color-15);
+  padding-top: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(5) {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(6) {
+  border-right: 0.125rem solid var(--color-15);
+  border-left: 0.125rem solid var(--color-15);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(7) {
+  border-right: 0.125rem solid var(--color-15);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.parceiros-itens li:nth-of-type(8) {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* estilo responsivo quebra para duas colunas somente
+   e fazendo os ajustes nas posições dos separadores
+   agora no estilo responsivo os separadores do meio
+   são gerador sempre a partir do item da primeira coluna
+   para conseguir o alinhamento de maneira mais fácil */
+@media (max-width: 50rem) {
+  .parceiros-itens {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .parceiros-itens li {
+    display: grid;
+    justify-items: center;
+  }
+
+  .parceiros-itens li:nth-of-type(1) {
+    border-bottom: 0.125rem solid var(--color-15);
+    border-right: 0.125rem solid var(--color-15);
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(2) {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--color-15);
+    padding-top: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(3) {
+    border-right: 0.125rem solid var(--color-15);
+    border-bottom: 0.125rem solid var(--color-15);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(4) {
+    border-bottom: 0.125rem solid var(--color-15);
+    padding-top: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(5) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-right: 0.125rem solid var(--color-15);
+    border-bottom: 0.125rem solid var(--color-15);
+  }
+
+  .parceiros-itens li:nth-of-type(6) {
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0.125rem solid var(--color-15);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(7) {
+    border-right: 0.125rem solid var(--color-15);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .parceiros-itens li:nth-of-type(8) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* quebra padrão de todo titulo no site */
+@media (max-width: 37.5rem) {
+  .parceiros h1 {
+    font-size: var(--size-48);
+  }
+}

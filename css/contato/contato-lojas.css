@@ -1,0 +1,159 @@
+/* caixa pai */
+.contato-lojas-locais {
+  padding-bottom: 7.5rem;
+}
+
+/* titulo da section */
+.contato-lojas-title {
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 3.75rem;
+}
+
+/* estilos gerais das duas caixas que seguram
+   os mapas com endereço */
+
+/* flutuação geral interna para facilitar
+   o alinhamento dos itens */
+.contato-lojas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 0;
+  background-color: var(--color-8);
+  box-shadow: 0px 0.0625rem 0.125rem var(--box-shadow-main);
+  border-radius: 0px 0px 0.3125rem 0.3125rem;
+}
+
+/* estilo de cada mapa */
+.contato-lojas-img {
+  grid-column: 1 / -1;
+}
+
+/* titulo de cada loja */
+.contato-lojas h3 {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+  padding-left: 2rem;
+}
+
+.contato-lojas h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--color-11);
+}
+
+/* estilo do endereço e de mais informações */
+.contato-lojas-endereco span {
+  line-height: 2;
+  display: block;
+}
+
+.contato-lojas-endereco {
+  border-left: 0.125rem solid var(--color-15);
+  padding-left: 0.75rem;
+  margin-left: 3.25rem;
+}
+
+.contato-lojas-informacoes span {
+  display: block;
+  line-height: 2;
+}
+
+.contato-lojas-informacoes {
+  border-left: 0.125rem solid var(--color-15);
+  padding-left: 0.75rem;
+}
+
+.contato-lojas-funcionamento span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contato-lojas-funcionamento span::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../img/icons/icons-contato/horario.svg);
+}
+.contato-lojas-funcionamento {
+  grid-column: 1 / -1;
+  padding-left: 2rem;
+  padding-bottom: 0.75rem;
+}
+
+/* estilo de interação com o script para indicar ao usuário
+   quando a loja está aberta ou fechado */
+.contato-lojas-funcionamento span::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.contato-lojas-funcionamento span.aberto::after {
+  background-color: var(--color-19);
+}
+
+.contato-lojas-funcionamento span.fechado::after {
+  background-color: var(--color-20);
+}
+
+/* flutuação principal das caixas */
+.contato-lojas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* primeiro ponto de quebra
+   quebrando tudo para uma coluna */
+@media (max-width: 60rem) {
+  .contato-lojas-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ponto de quebra padrão dos títulos */
+@media (max-width: 37.5rem) {
+  .contato-lojas-title {
+    font-size: var(--size-48);
+  }
+}
+
+/* ultimo ponto de quebra, ajuste na flutuação
+   interna dos conteúdos quebrando para uma coluna
+   e ajustando os margins para voltar ao alinhamento */
+@media (max-width: 28.75rem) {
+  .contato-lojas {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-lojas h3 {
+    padding-left: 0.75rem;
+    padding-right: 0.8rem;
+  }
+
+  .contato-lojas-endereco {
+    margin-left: 2rem;
+  }
+
+  .contato-lojas-informacoes {
+    margin-left: 2rem;
+    padding-left: 0.75rem;
+    border-left: 0.125rem solid var(--color-15);
+  }
+
+  .contato-lojas-funcionamento {
+    padding-left: 0.75rem;
+  }
+}

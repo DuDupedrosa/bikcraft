@@ -1,0 +1,18 @@
+.intro-termos {
+  padding: 3.75rem 1.25rem;
+}
+
+.termos {
+  padding: 7.5rem 1.25rem;
+  display: grid;
+  gap: 48px;
+}
+
+.termos-itens {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.termos-itens p {
+  line-height: 1.3;
+}

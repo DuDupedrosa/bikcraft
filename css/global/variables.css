@@ -1,0 +1,44 @@
+:root {
+  /* fonts-size */
+  --size-12: 0.75rem; /* 12px */
+  --size-14: 0.875rem; /* 14px */
+  --size-16: 1rem; /* 16px */
+  --size-18: 1.125rem; /* 18px */
+  --size-20: 1.25rem; /* 20px */
+  --size-24: 1.5rem; /* 24px */
+  --size-28: 1.75rem; /* 28px */
+  --size-32: 2rem; /* 32px */
+  --size-36: 2.25rem; /* 36px */
+  --size-40: 2.5rem; /* 40px */
+  --size-44: 2.75rem; /* 44px */
+  --size-48: 3rem; /* 48px */
+  --size-60: 3.75rem; /* 60px */
+  --size-64: 4rem; /* 64px */
+
+  /* colors */
+  --color-1: #000000;
+  --color-2: #111111;
+  --color-3: #2e2e2e;
+  --color-4: #595959;
+  --color-5: #9c9c9c;
+  --color-6: #b2b2b2;
+  --color-7: #cccccc;
+  --color-8: #ffffff;
+  --color-9: #ffbf00;
+  --color-10: #f2a50c;
+  --color-11: #ffbb00;
+  --color-12: #332200;
+  --color-13: #664400;
+  --color-14: #f2f2f2;
+  --color-15: #ededed;
+  --color-16: #404040;
+  --color-17: #f7f7f7;
+  --color-18: #717171;
+  --color-19: #00b4d8;
+  --color-20: #d90429;
+  --box-shadow-main: rgba(0, 0, 0, 0.1);
+
+  /* font-family */
+  --family-poppins: "Poppins", sans-serif;
+  --family-roboto: "Roboto", sans-serif;
+}

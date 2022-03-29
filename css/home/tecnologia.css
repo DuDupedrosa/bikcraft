@@ -1,0 +1,188 @@
+/* background-geral da section para dar a ilusão que 
+   a imagem está estourando o conteúdo */
+.tecnologia-bg {
+  box-shadow: inset 0 7.5rem var(--color-8), inset 0 -7.5rem var(--color-8);
+  margin-bottom: 7.5rem;
+}
+
+/* flutuação principal da section */
+.tecnologia {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  position: relative;
+}
+
+.tecnologia::before {
+  content: '';
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-repeat: no-repeat;
+  background-image: url(../../img/icons/details-sections/detail-to-bottom.svg);
+  position: absolute;
+  bottom: 8.75rem;
+  left: -3.75rem;
+}
+
+.tecnologia-content {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+
+.tecnologia-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* estilos da parte que segura o conteúdo da section */
+
+/* estilo do span principal */
+.tecnologia-content > span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1.25rem;
+}
+
+/* estilo do titulo principal da section */
+.tecnologia-content h2 {
+  line-height: 1.125;
+  margin-bottom: 2rem;
+  max-width: 33.625rem;
+}
+
+/* estilo do paragrafo principal */
+.tecnologia-content > p {
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  max-width: 33.375rem;
+}
+
+/* estilo do link */
+.tecnologia-content a {
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+  margin-bottom: 5rem;
+}
+
+.tecnologia-content a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--color-11);
+  transition: 0.3s;
+}
+
+.tecnologia-content a:hover::after {
+  background-color: var(--color-8);
+}
+
+/* estilos da lista */
+.tecnologia-especificacoes {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.tecnologia-especificacoes li h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+/* estilo para colocar o icone */
+.tecnologia-especificacoes li h3::before {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  background-repeat: no-repeat;
+}
+
+.tecnologia-especificacoes li:first-child h3::before {
+  background-image: url(../../img/icons/eletrica.svg);
+}
+
+.tecnologia-especificacoes li:last-child h3::before {
+  background-image: url(../../img/icons/rastreador.svg);
+}
+
+.tecnologia-especificacoes p {
+  line-height: 1.5;
+  max-width: 16.25rem;
+}
+
+/* ponto em que a imagem fica totalmente fora do layout
+   e por isso menor que 1000px retiramos ela */
+@media (max-width: 62.5rem) {
+  .tecnologia-img {
+    display: none;
+  }
+
+  .tecnologia-content h2 {
+    max-width: max-content;
+  }
+
+  /* retirando a diferença quando a imagem sai
+     pois estava somando o padding mais a margin
+     de quando tinha a imagem, tirando também o
+     box-shadow e resolvendo o problema da soma
+     das margins e paddings */
+  .tecnologia-bg {
+    box-shadow: inset 0 0 var(--color-8), inset 0 0 var(--color-8);
+    margin-bottom: 7.5rem;
+  }
+
+  .tecnologia-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* ponto em que é feito os ajustes nos textos */
+@media (max-width: 37.5rem) {
+  .tecnologia-content h2 {
+    font-size: var(--size-48);
+  }
+
+  .tecnologia-content > p {
+    font-size: var(--size-18);
+  }
+
+  .tecnologia-content > span {
+    font-size: var(--size-18);
+  }
+
+  /* quebrando a lista para uma coluna */
+  .tecnologia-especificacoes {
+    flex-direction: column;
+  }
+
+  .tecnologia-especificacoes li h3 {
+    font-size: var(--size-20);
+  }
+
+  .tecnologia-especificacoes p {
+    font-size: var(--size-16);
+    max-width: max-content;
+  }
+}
+
+/* ultimo ponto de quebra, pois menor que isso
+   o titulo estava quebrando de maneira que estava
+   prejudicando o layout por isso diminuímos o font */
+@media (max-width: 28.75rem) {
+  .tecnologia-content h2 {
+    font-size: var(--size-36);
+  }
+
+  .tecnologia-content a {
+    font-size: var(--size-18);
+  }
+
+  .tecnologia-content > span {
+    font-size: var(--size-16);
+  }
+}

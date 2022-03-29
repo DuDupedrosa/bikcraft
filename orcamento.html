@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikcraft / Bicicletas elétricas</title>
+  <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente.">
+
+  <!-- metas-ogs -->
+  <meta property="og::title" content="Bikcraft / Bicicletas elétricas">
+  <meta property="og::description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente.">
+  <meta property="og:type" content="website">
+
+  <!-- fonts-externas poppins/roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+
+  <!-- links css / favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <header class="background-1" id="header">
+    <div class="container-main header">
+      <div class="header-logo" aria-label="Retornar para a home">
+        <a href="./index.html">
+          <img src="./img/icons/bikcraft.svg" alt="bikcraft / logo" width="136" height="32">
+        </a>
+      </div>
+      <nav aria-label="Navegação principal" data-menu="nav" class="nav-principal">
+        <div data-menu="button" aria-label="Clique para abrir o menu" class="menu-button">
+          <img src="./img/icons/icon-menu-mobile.svg" alt="Clique para abrir o menu" data-menu="icon">
+        </div>
+        <ul class="nav-itens" data-menu="list">
+          <li>
+            <a href="./bicicletas.html" class="color-8 weight-500 size-18 family-1">Bicicletas</a>
+          </li>
+          <li>
+            <a href="./seguros.html" class="color-8 weight-500 size-18 family-1">Seguros</a>
+          </li>
+          <li>
+            <a href="./contato.html" class="color-8 weight-500 size-18 family-1">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="background-2 orcamento" aria-label="Orcamento bikcraft">
+
+    <div class="intro-geral container-main intro-contato">
+      <span class="color-6 family-2 weight-500 size-24">Contações no seu email</span>
+      <h1 class="color-8 family-1 weight-600 size-64">Solicite um orçamento<span class="color-11">.</span></h1>
+    </div>
+
+    <form id="orcamento" class="container-main" aria-label="Formulário de orcamento">
+      <!-- primeira parte do formulário aonde ocorre as interações com os
+        inputs do tipo rádio -->
+      <div class="orcamento-bicicletas">
+        <h2 class="color-6 family-1 weight-600 size-12 title-options-orcamento">Bikcraft ou seguro?</h2>
+
+        <!-- inputs inicias visíveis ao usuário -->
+        <div class="grid-input-iniciais">
+
+          <!-- input inicial de bicicletas -->
+          <div class="input-bikcraft input-options-initials">
+            <input type="radio" name="produtos" id="bicicletas" value="Bikcraft">
+            <label for="bicicletas" data-visible="inputs-iniciais">Bikcraft</label>
+          </div>
+
+          <!-- input inicial de seguros -->
+          <div class="input-seguro input-options-initials">
+            <input type="radio" name="produtos" id="seguro" value="seguro">
+            <label for="seguro" data-visible="inputs-iniciais">Seguro</label>
+          </div>
+        </div>
+
+        <!-- clicou em seguros vai abrir está caixa, com os inputs dos seguros -->
+        <div class="orcamento-seguros" data-visible="seguros">
+          <span class="color-6 family-1 weight-600 size-12 title-options-orcamento">Escolha o plano:</span>
+          <div class="opcoes-seguros opcoes-seguros-prata">
+            <input type="radio" name="seguros" value="prata" id="prata">
+            <label for="prata">Prata</label>
+          </div>
+          <div class="opcoes-seguros opcoes-seguros-prata">
+            <input type="radio" name="seguros" value="ouro" id="ouro">
+            <label for="ouro">Ouro</label>
+          </div>
+        </div>
+
+        <!-- clicou em bikcraft vai abrir está caixa, com os inputs de bicicletas -->
+        <div class="opcoes-bikcraft" data-visible="bicicletas">
+          <span class="color-6 family-1 weight-600 size-12 title-options-orcamento">Escolha a sua:</span>
+          <div class="opcoes-nimbus-stark-input opcoes-bicicletas-input">
+            <input type="radio" name="bicicletas" value="nimbus-stark" id="nimbus-stark">
+            <label for="nimbus-stark" data-visible="bicicletas-input">Nimbus Stark</label>
+          </div>
+          <div class="opcoes-magic-might-input opcoes-bicicletas-input">
+            <input type="radio" name="bicicletas" value="magic-might" id="magic-might">
+            <label for="magic-might" data-visible="bicicletas-input">Magic Might</label>
+          </div>
+          <div class="opcoes-nebula-cosmic-input opcoes-bicicletas-input">
+            <input type="radio" name="bicicletas" value="nebula-cosmic" id="nebula-cosmic">
+            <label for="nebula-cosmic" data-visible="bicicletas-input">Nebula Cosmic</label>
+          </div>
+          <!-- quando ocorre o clique em cada bicicleta abre uma caixa 
+               com a informações referentes a esse input -->
+          <div class="opcoes-bicicletas-information opcoes-bicicletas-information-nimbus" data-visible="bicicletas-information">
+            <h2 class="color-2 family-1 weight-500 size-16">Nimbus Stark</h2>
+            <ul>
+              <li>
+                Moto elétrico
+              </li>
+              <li>
+                Fibra de carbono
+              </li>
+              <li>
+                40 km/h
+              </li>
+              <li>
+                Rastreador
+              </li>
+            </ul>
+            <div class="opcoes-nimbus-stark-img">
+              <img src="./img/orcamento/bicicleta-orcamento-1.jpg" alt="">
+            </div>
+          </div>
+          <div class="opcoes-bicicletas-information opcoes-bicicletas-information-magic" data-visible="bicicletas-information">
+            <h2 class="color-2 family-1 weight-500 size-16">Magic Might</h2>
+            <ul>
+              <li>
+                Moto elétrico
+              </li>
+              <li>
+                Fibra de carbono
+              </li>
+              <li>
+                40 km/h
+              </li>
+              <li>
+                Rastreador
+              </li>
+            </ul>
+            <div class="opcoes-nimbus-stark-img">
+              <img src="./img/orcamento/bicicleta-orcamento-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="opcoes-bicicletas-information opcoes-bicicletas-information-nebula" data-visible="bicicletas-information">
+            <h2 class="color-2 family-1 weight-500 size-16">Nebula Cosmic</h2>
+            <ul>
+              <li>
+                Moto elétrico
+              </li>
+              <li>
+                Fibra de carbono
+              </li>
+              <li>
+                40 km/h
+              </li>
+              <li>
+                Rastreador
+              </li>
+            </ul>
+            <div class="opcoes-nimbus-stark-img">
+              <img src="./img/orcamento/bicicleta-orcamento-3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- realmente aonde está o formulário que será preenchido pelo usuário -->
+      <div class="orcamento-form background-8">
+        <h2 class="color-16 family-1 weight-600 size-12 title-options-orcamento">Dados Pessoais:</h2>
+        <div class="orcamento-form-name">
+          <label for="name" class="family-1 weight-500 size-16 color-2">Nome</label>
+          <input type="text" name="nome" id="name" class="family-2 size-16 color-18" required>
+        </div>
+        <div class="orcamento-form-sobrenome">
+          <label for="sobrenome" class="family-1 weight-500 size-16 color-2">Sobrenome</label>
+          <input type="text" name="sobrenome" id="sobrenome" class="family-2 size-16 color-18" required>
+        </div>
+        <div class="orcamento-form-cpf">
+          <label for="cpf" class="family-1 weight-500 size-16 color-2">CPF</label>
+          <input type="text" name="cpf" id="cpf" class="family-2 size-16 color-18" placeholder="000.000.000-00" required>
+        </div>
+        <div class="orcamento-form-email" data-box="input-email">
+          <label for="email" class="family-1 weight-500 size-16 color-2">Email</label>
+          <input type="email" name="email" id="email" class="family-2 size-16 color-18" data-regexp="email" required>
+        </div>
+        <h2 class="color-16 family-1 weight-600 size-12 title-options-orcamento">Entrega</h2>
+        <div class="orcamento-form-cep">
+          <label for="cep" class="family-1 weight-500 size-16 color-2">CEP</label>
+          <input type="text" name="cep" id="cep" class="family-2 size-16 color-18" required>
+        </div>
+        <div class="orcamento-form-numero">
+          <label for="numero" class="family-1 weight-500 size-16 color-2">Numero</label>
+          <input type="number" name="numero" id="numero" class="family-2 size-16 color-18">
+        </div>
+        <div class="orcamento-form-logradouro">
+          <label for="logradouro" class="family-1 weight-500 size-16 color-2">Logradouro</label>
+          <input type="text" name="logradouro" id="logradouro" class="family-2 size-16 color-18" placeholder="Rua, avenida...">
+        </div>
+        <div class="orcamento-form-bairro">
+          <label for="bairro" class="family-1 weight-500 size-16 color-2">Bairro</label>
+          <input type="text" name="bairro" id="bairro" class="family-2 size-16 color-18">
+        </div>
+        <div class="orcamento-form-cidade">
+          <label for="cidade" class="family-1 weight-500 size-16 color-2">Cidade</label>
+          <input type="text" name="cidade" id="cidade" class="family-2 size-16 color-18">
+        </div>
+        <div class="orcamento-form-estado">
+          <label for="estado" class="family-1 weight-500 size-16 color-2">Estado</label>
+          <input type="text" name="estado" id="estado" class="family-2 size-16 color-18">
+        </div>
+        <div class="orcamento-form-termos">
+          <input type="checkbox" name="termos" id="termos" value="accept" required>
+          <p class="family-1 weight-500 size-16 color-2">Li e aceito os <a href="./termos.html" class="color-2">termos e condições</a></p>
+        </div>
+        <button class="color-12 family-1 weight-600 size-18" id="button-orcamento">Solicitar orçamento</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="background-1 footer-bg">
+    <div class="footer">
+      <div class="footer-intro-bg">
+        <div class="footer-intro container-main">
+          <div class="footer-logo">
+            <a href="./index.html">
+              <img src="./img/icons/bikcraft.svg" alt="bikcraft / logo" width="136" height="32">
+            </a>
+          </div>
+          <div class="footer-return-top">
+            <a href="#header" aria-label="Clique para retornar para o topo da página" data-anima="scroll-suave-top">
+              <img src="./img/icons/arrow-footer.svg" alt="arrow topo" width="23" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content container-main">
+        <div class="footer-contato">
+          <h2 class="color-8 family-2 weight-500 size-24">Contato</h2>
+          <a href="tel:+55 21 9999-9999" class="color-6 size-18 family-2" target="_blank">+55 21 9999-9999</a>
+          <a href="mailto:contato@bikcraft.com" class="color-6 size-18 family-2 footer-contato-email" target="_blank">contato@bikcraft.com</a>
+          <a href="https://www.google.com.br/maps" class="color-6 size-18 family-2" target="_blank">Rua Ali Perto, 42 - Botafogo
+            <span class="footer-estado">Rio de Janeiro - RJ</span></a>
+          <ul class="footer-contato-social">
+            <li>
+              <a href="https://instagram.com" target="_blank">
+                <img src="./img/icons/redes-sociais/instagram.svg" alt="instagram" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <img src="./img/icons/redes-sociais/facebook.svg" alt="facebook" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank">
+                <img src="./img/icons/redes-sociais/youtube.svg" alt="youtube" width="32" height="32">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-information ">
+          <h2 class="color-8 family-2 weight-500 size-24">Informações</h2>
+          <ul>
+            <li>
+              <a href="./bicicletas.html" class="color-6 size-18 family-2">Bicicletas</a>
+            </li>
+            <li>
+              <a href="./seguros.html" class="color-6 size-18 family-2">Seguros</a>
+            </li>
+            <li>
+              <a href="./contato.html" class="color-6 size-18 family-2">Contato</a>
+            </li>
+            <li>
+              <a href="./termos.html" class="color-6 size-18 family-2">Termos e Condições</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="direitos container-main">
+      <p class="color-6 size-18 family-2"> Bikcrafaft © Alguns direitos reservados</p>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>

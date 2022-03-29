@@ -1,0 +1,146 @@
+/* button utilizado para os estilos do menu mobile
+   por isso só inicia quando chega em 800px */
+.menu-button {
+  display: none;
+}
+
+/* flutuação principal do header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.25rem;
+}
+
+/* flutuação entre os links da navegação */
+.nav-itens {
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* estilos dos links */
+.nav-itens li a {
+  padding: 0.6rem 0;
+  text-transform: capitalize;
+}
+
+.nav-itens li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.125rem;
+  background-color: var(--color-8);
+  transition: 0.3s;
+}
+
+.nav-itens li a:hover::after {
+  width: 100%;
+}
+
+/* estilos do menu-mobile */
+@media (max-width: 50rem) {
+  .menu-button {
+    display: block;
+  }
+  /* colocando display de grid para facilitar 
+     o novo posicionamento do header */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* começa os estilos do menu mobile
+     importante definir o height maior que 
+     as duas imagens tanto o menu hambúrguer quanto o " x "
+     pois asssim evita de dar o pulo quando ocorre a troca de icone */
+  .menu-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    max-width: max-content;
+    height: 3.125rem;
+    padding: 0.6rem 0;
+  }
+
+  /* colocando o posicionamento correto do header */
+  .header-logo {
+    grid-column: 2;
+  }
+
+  .nav-principal {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* estilos do list do menu mobile */
+  .nav-itens {
+    position: absolute;
+    display: none;
+    top: 3rem;
+    left: 0;
+    background-color: var(--color-2);
+    border-radius: 0.3125rem;
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  .nav-itens li a {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 1rem 3rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-itens li a::before {
+    content: "";
+    display: inline-block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: var(--color-3);
+  }
+
+  .nav-itens li a:hover::after {
+    width: 0;
+  }
+
+  .nav-itens li + li {
+    margin-top: 0.4rem;
+    border-top: 0.125rem solid var(--color-3);
+  }
+
+  /* animação do menu */
+  @keyframes show-menu {
+    from {
+      opacity: 0;
+      transform: translate3d(-2.5rem, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  /* começa com display de none porém via JavaScript
+     quando recebe a classe de active menu ele ganha
+     sua visibilidade e quando está sem a classe volta
+     para o display de none */
+  [data-menu="list"].active-menu {
+    display: block;
+    animation: show-menu 0.4s forwards;
+  }
+
+  /* estilo especifico para quando trabalhamos com
+     o header de bicicletas internas que teve q ter
+     uma alteração nos atributos para fazer o correto
+     direcionamento das imagens */
+  [data-menu="list-bike-intern"].active-menu-bike-intern {
+    display: block;
+    animation: show-menu 0.4s forwards;
+  }
+}

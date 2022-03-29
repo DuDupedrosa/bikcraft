@@ -1,0 +1,66 @@
+/* estilos do background */
+.bicicletas-internas-seguros-bg {
+  box-shadow: inset 0 7.5rem var(--color-8), inset 0 -7.5rem var(--color-1);
+}
+
+/* flutuação geral */
+.bicicletas-internas-seguros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* padding no conteúdo por causa do box-shadow somando 
+   com seus padding pré-definidos */
+.bicicletas-internas-seguros-content {
+  padding: 11.25rem 0;
+}
+
+/* ajustes para a imagem pegar a div inteira */
+.bicicletas-internas-seguros-img img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0.3125rem;
+}
+
+/* estilos do conteúdo */
+.bicicletas-internas-seguros-content h1 {
+  margin-bottom: 2rem;
+  line-height: 1.125;
+}
+
+.bicicletas-internas-seguros-content p {
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* responsivo */
+@media (max-width: 54.375rem) {
+  /* quebra para uma coluna e retirada a imagem
+     pois era totalmente de finco estilizador */
+  .bicicletas-internas-seguros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bicicletas-internas-seguros-img {
+    display: none;
+  }
+
+  /* retirado o padding e o box shadow pois
+     sem a imagem não faz sentido */
+  .bicicletas-internas-seguros-bg {
+    box-shadow: inset 0 0 var(--color-8), inset 0 0 var(--color-1);
+  }
+
+  /* somente é dado o padding original */
+  .bicicletas-internas-seguros-content {
+    padding: 3.75rem 0;
+  }
+}
+
+/* quebra padrão no titulo */
+@media (max-width: 37.5rem) {
+  .bicicletas-internas-seguros-content h1 {
+    font-size: var(--size-48);
+  }
+}

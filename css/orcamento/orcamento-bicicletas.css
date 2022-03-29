@@ -1,0 +1,279 @@
+/* background que pega de ponta a ponta, para
+   gerar o estilo e parecer que a caixa está estourando
+  a container e vazando pelo background cinza */
+.orcamento {
+  background: linear-gradient(var(--color-2) 60%, var(--color-17) 60%);
+  padding-bottom: 7.5rem;
+}
+
+/* caixa pai que segura a primeira parte do form */
+.orcamento-bicicletas {
+  background-color: var(--color-1);
+  border-radius: 0.3125rem 0 0 0.3125rem;
+  padding: 3.75rem;
+}
+
+/* estilos gerais dos títulos do formulário */
+.title-options-orcamento {
+  text-transform: uppercase;
+  letter-spacing: 0.015rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* detalhe do title */
+.title-options-orcamento::before {
+  content: '';
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.5rem;
+  background-color: var(--color-11);
+}
+
+/* estilos gerais dos inputs, gerando também
+   os estilos que tira a visibilidade da bolinha do radio
+   e toda a interação é feita com o clique na label
+   para assim poder criar os estilos do jeito que foi
+   projetado */
+.input-options-initials label,
+.opcoes-bicicletas-input label,
+.opcoes-seguros label {
+  font-size: var(--size-16);
+  font-family: var(--family-poppins);
+  font-weight: 500;
+  color: var(--color-7);
+  background-color: var(--color-3);
+  padding: 1rem 3.75rem 1rem 1.125rem;
+  border-radius: 0.3125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0.125rem solid transparent;
+}
+
+/* gerando o detalhe para ser similar a uma bolinha
+   de escolha como a do input radio */
+.input-options-initials label::before,
+.opcoes-bicicletas-input label::before,
+.opcoes-seguros label::before {
+  content: '';
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: inset 0 0 0.125rem var(--color-5);
+  transition: 0.3s;
+}
+
+/* mudando a ação do input quando selecionado */
+.input-options-initials input:checked + label {
+  background-color: var(--color-8);
+  color: var(--color-2);
+  border-color: var(--color-11);
+}
+
+.input-options-initials input:checked + label::before,
+.opcoes-seguros input:checked + label::before {
+  box-shadow: inset 0 0 0.125rem var(--color-18),
+    inset 0 0 0 0.25rem var(--color-8);
+  background-color: var(--color-18);
+}
+
+/* botando toda a funcionalidade no label,
+   retirando a visibilidade da bolinha do radio */
+.input-options-initials input,
+.opcoes-bicicletas-input input,
+.opcoes-seguros input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* flutuação dos dois inputs iniciais */
+.grid-input-iniciais {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+/* estilos dos input das bicicletas.
+   display grid para poder flutuar e 
+   colocar cada box relacionada corretamento 
+   com o seu input */
+.opcoes-bikcraft {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.opcoes-bicicletas-information-nimbus {
+  grid-row: 3;
+}
+
+.opcoes-bicicletas-information-magic {
+  grid-row: 4;
+}
+
+.opcoes-bicicletas-information-nebula {
+  grid-row: 5;
+}
+
+/* flutuação interna das box de informações
+   de cada input de escolha de bicicleta */
+.opcoes-bicicletas-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-8);
+  align-items: center;
+  border-radius: 0.3125rem;
+  padding: 1rem;
+  gap: 1rem;
+  /* display: none; */
+}
+
+/* estilos do h2 da box de informações */
+.opcoes-bicicletas-information h2 {
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcoes-bicicletas-information h2::after {
+  content: 'R$ 2499';
+  display: inline-block;
+  font-family: var(--family-poppins);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-2);
+}
+
+/* estilos da lista com as informações da bicicleta */
+.opcoes-bicicletas-information ul li {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.opcoes-bicicletas-information ul li::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+}
+
+.opcoes-bicicletas-information ul li:nth-of-type(1)::before {
+  background-image: url(../../img/icons/orcamento-icons/eletrica.svg);
+}
+
+.opcoes-bicicletas-information ul li:nth-of-type(2)::before {
+  background-image: url(../../img/icons/orcamento-icons/carbono.svg);
+}
+
+.opcoes-bicicletas-information ul li:nth-of-type(3)::before {
+  background-image: url(../../img/icons/orcamento-icons/velocidade.svg);
+}
+
+.opcoes-bicicletas-information ul li:nth-of-type(4)::before {
+  background-image: url(../../img/icons/orcamento-icons/rastreador.svg);
+}
+
+.opcoes-bicicletas-information ul li + li {
+  margin-top: 0.5rem;
+}
+
+/* estilos de interação via script */
+/* por padrão todas as caixas terão display de none
+   via script quando ocorre ação do click e add
+   uma classe que via css garantimos que ele tera
+   visibilidade somente quando contiver essa classe,
+   somente quando ocorrer o click */
+.opcoes-bikcraft {
+  display: none;
+  transition: 0.3s;
+}
+
+[data-visible='bicicletas'].active-box {
+  display: grid;
+}
+
+.orcamento-seguros {
+  display: none;
+}
+
+[data-visible='seguros'].active-box {
+  display: grid;
+}
+
+[data-visible='bicicletas-input'].active-box {
+  background-color: var(--color-8);
+  color: var(--color-2);
+  border: 2px solid var(--color-11);
+}
+
+[data-visible='bicicletas-input'].active-box::before {
+  box-shadow: inset 0 0 0.125rem var(--color-18),
+    inset 0 0 0 0.25rem var(--color-8);
+  background-color: var(--color-18);
+}
+
+/* estilos das visualizações internas dos produtos */
+.opcoes-bicicletas-information {
+  display: none;
+  transition: 0.3s;
+}
+
+@keyframes show-produtos {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-visible='bicicletas-information'].active-box {
+  display: grid;
+  animation: show-produtos 0.8s forwards;
+}
+
+/* estilos dos input de seguro */
+.opcoes-seguros-prata {
+  margin-bottom: 1.25rem;
+}
+
+.opcoes-seguros label {
+  position: relative;
+}
+
+.opcoes-seguros label::after {
+  content: 'R$ 4999';
+  font-size: var(--size-16);
+  font-weight: 500;
+  font-family: var(--family-poppins);
+  color: var(--color-7);
+  position: absolute;
+  right: 1.25rem;
+  display: none;
+}
+
+.opcoes-seguros input:checked + label::after {
+  display: inline-block;
+  color: var(--color-2);
+}
+
+.opcoes-seguros input:checked + label {
+  background-color: var(--color-8);
+  color: var(--color-2);
+  border-color: var(--color-11);
+}

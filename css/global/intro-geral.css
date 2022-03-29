@@ -1,0 +1,20 @@
+.intro-geral > span {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.intro-geral h1 {
+  text-transform: lowercase;
+  line-height: 1.125;
+}
+
+@media (max-width: 37.5rem) {
+  .intro-geral h1 {
+    font-size: var(--size-48);
+  }
+
+  .intro-geral > span {
+    font-size: var(--size-20);
+  }
+}

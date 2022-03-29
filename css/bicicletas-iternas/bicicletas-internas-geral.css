@@ -1,0 +1,209 @@
+/* caixa que segura toda a section da bicicleta */
+.bicicletas-internas-bg {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  margin-bottom: 7.5rem;
+}
+
+/* estilo do h1 da bicicleta */
+.intro-bicicletas-internas h1 {
+  text-transform: capitalize;
+  margin-bottom: 3.75rem;
+}
+
+/* flutuação geral */
+.bicicletas-internas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* flutuação das imagens */
+.bicicletas-internas-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.bicicletas-internas-img-1 {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.bicicletas-internas-img img {
+  border-radius: 0.3125rem;
+}
+
+/* estilos do conteúdo duas colunas
+   para facilitar o alinhamento */
+.bicicletas-internas-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+
+.bicicletas-internas-content > p {
+  line-height: 1.33;
+  margin-bottom: 2rem;
+  grid-column: 1 / -1;
+}
+
+/* detalhe que fica do lado do button */
+.bicicletas-internas-compras-detalhe-produto {
+  justify-self: start;
+  align-self: center;
+  padding-left: 0.5rem;
+}
+
+.bicicletas-internas-compras-detalhe-produto span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: lowercase;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-1);
+  border-radius: 0.3125rem;
+}
+
+.bicicletas-internas-compras-detalhe-produto span + span {
+  margin-top: 0.5rem;
+}
+
+/* estilos da caixa de informações */
+.bicicletas-internas-informacoes {
+  grid-column: 1 / -1;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.bicicletas-internas-informacoes > span {
+  text-transform: uppercase;
+  letter-spacing: 0.015rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* flutuação geral entre as caixas com as informações */
+.bicicletas-internas-informacoes-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-1);
+  border-radius: 0.3125rem;
+}
+
+.bicicletas-internas-informacoes-itens h2 {
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+/* estilo padrão do ícone de cada h2 */
+.bicicletas-internas-informacoes-itens h2::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  margin-bottom: 0.25rem;
+}
+
+/* ícone referente ao seu h2 */
+.bicicletas-internas-informacoes-itens li:nth-of-type(1) h2::before {
+  background-image: url(../../img/icons/bicicletas-especific/eletrica.svg);
+}
+
+.bicicletas-internas-informacoes-itens li:nth-of-type(2) h2::before {
+  background-image: url(../../img/icons/bicicletas-especific/velocidade.svg);
+}
+
+.bicicletas-internas-informacoes-itens li:nth-of-type(3) h2::before {
+  background-image: url(../../img/icons/bicicletas-especific/rastreador.svg);
+}
+
+.bicicletas-internas-informacoes-itens li:nth-of-type(4) h2::before {
+  background-image: url(../../img/icons/bicicletas-especific/carbono.svg);
+}
+
+/* o texto das informações da bicicleta */
+.bicicletas-internas-informacoes-itens p {
+  line-height: 1.5;
+}
+
+/* estilos da ficha técnica */
+.bicicletas-internas-ficha-tec {
+  grid-column: 1 / -1;
+}
+
+.bicicletas-internas-ficha-tec > span {
+  text-transform: uppercase;
+  letter-spacing: 0.015rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.bicicletas-internas-ficha-tec-itens {
+  padding: 2rem;
+  background-color: var(--color-1);
+  border-radius: 0.3125rem;
+}
+
+/* colocando um sempre longe do outro */
+.bicicletas-internas-ficha-tec-itens li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.375rem 0;
+}
+
+/* estilo para gerar o separador */
+.bicicletas-internas-ficha-tec-itens li + li {
+  border-top: 0.0625rem solid var(--color-2);
+}
+
+/* responsivo */
+@media (max-width: 53.75rem) {
+  /* quebra para uma coluna */
+  .bicicletas-internas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* ajuste no tamanho da primeira imagem */
+  .bicicletas-internas-img-1 img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .bicicletas-internas-img-1 {
+    height: 18.75rem;
+  }
+
+  .bicicletas-internas-img-1 img {
+    border-radius: 0.3125rem;
+  }
+
+  .bicicletas-internas-bg {
+    margin-bottom: 3.75rem;
+  }
+}
+
+/* ultimo ponto de quebra */
+@media (max-width: 37.5rem) {
+  .bicicletas-internas-informacoes-itens {
+    grid-template-columns: 1fr;
+  }
+
+  .bicicletas-internas-compras-detalhe-produto {
+    padding-top: 1rem;
+    padding-left: 0;
+    grid-column: 1;
+  }
+
+  .button-bicicletas-internas-comprar {
+    grid-column: 1 / -1;
+  }
+}

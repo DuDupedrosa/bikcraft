@@ -1,0 +1,45 @@
+/* css / global */
+@import url(./global/reset.css);
+@import url(./global/variables.css);
+@import url(./global/utility.css);
+/* css global / header / footer */
+@import url(./global/header.css);
+@import url(./global/footer.css);
+
+/* home */
+@import url(./home/intro-home.css);
+@import url(./home/choose-bike.css);
+@import url(./home/tecnologia.css);
+@import url(./home/parceiros.css);
+@import url(./home/depoimento.css);
+@import url(./home/seguros-home.css);
+
+/* intro-geral */
+@import url(./global/intro-geral.css);
+
+/* bicicletas */
+@import url(./bicicletas/bicicletas.css);
+
+/* bicicletas-internas */
+@import url(./bicicletas-iternas/bicicletas-internas-geral.css);
+@import url(./bicicletas-iternas/bicicletas-interna-escolha.css);
+@import url(./bicicletas-iternas/bicicletas-internas-seguros.css);
+
+/* seguros */
+@import url(./seguros/intro-seguros.css);
+@import url(./seguros/vantagens.css);
+@import url(./seguros/perguntas.css);
+
+/* contato */
+@import url(./contato/form-contato.css);
+@import url(./contato/contato-lojas.css);
+
+/* estilos das mensagens de erro da regexp */
+@import url(./estilos-erro-regexp/estilos-erros-geral.css);
+
+/* estilo do orcamento */
+@import url(./orcamento/orcamento-bicicletas.css);
+@import url(./orcamento/orcamento-form.css);
+
+/* estilos do termo */
+@import url(./termos/termos.css);

@@ -1,0 +1,120 @@
+/* caixa pai */
+.bicicletas-internas-escolha {
+  margin-bottom: 7.5rem;
+}
+
+/* flutuação principal das caixas */
+.bicicletas-internas-escolha-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* estilo do titulo principal da section */
+.bicicletas-internas-escolha h1 {
+  text-transform: lowercase;
+  line-height: 1.125;
+  margin-bottom: 2.5rem;
+}
+
+/* estilos das imagens das outras bicicletas */
+.bicicletas-internas-escolha-itens-img {
+  margin-bottom: 0.75rem;
+}
+
+.bicicletas-internas-escolha-itens-img img {
+  border-radius: 0.3125rem;
+}
+
+/* estilo da descrição das imagens */
+.bicicletas-internas-escolha-itens h2 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bicicletas-internas-escolha-itens h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--color-11);
+  transition: 0.3s;
+}
+
+.bicicletas-internas-escolha-itens span {
+  padding-left: 1.25rem;
+}
+
+.bicicletas-internas-escolha-grid li a:hover h2::before {
+  width: 1.5rem;
+}
+
+/* width para forçar que estoure a container e assim
+   seja gerado o scroll-x no responsivo */
+.bicicletas-internas-escolha-grid li {
+  min-width: 17.5rem;
+}
+
+@media (max-width: 50rem) {
+  .bicicletas-internas-escolha {
+    margin-bottom: 3.75rem;
+  }
+}
+
+/* gerando os estilos do scroll */
+@media (max-width: 40rem) {
+  .bicicletas-internas-escolha h1 {
+    font-size: var(--size-48);
+  }
+
+  .bicicletas-internas-escolha-grid {
+    overflow-x: scroll;
+    padding-bottom: 2rem;
+  }
+
+  .bicicletas-internas-escolha-grid {
+    gap: 2rem;
+  }
+
+  /* estilização do scroll */
+  .bicicletas-internas-escolha-grid::-webkit-scrollbar {
+    width: 0.75rem; /* width of the entire scrollbar */
+  }
+
+  .bicicletas-internas-escolha-grid::-webkit-scrollbar-track {
+    background: var(--color-14); /* color of the tracking area */
+  }
+
+  .bicicletas-internas-escolha-grid::-webkit-scrollbar-thumb {
+    background-color: var(--color-11);
+    border-radius: 1.25rem;
+    border: 0.1875rem solid var(--color-14);
+  }
+}
+
+/* ultimo ponto de quebra */
+@media (max-width: 23.125rem) {
+  /* somente a quebra para uma coluna e ajuste
+     no height das imagens */
+  .bicicletas-internas-escolha-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bicicletas-internas-escolha-itens-img img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bicicletas-internas-escolha-itens-img {
+    height: 15.625rem;
+  }
+
+  .bicicletas-internas-escolha-grid {
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+}
