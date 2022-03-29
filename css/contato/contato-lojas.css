@@ -40,7 +40,7 @@
 }
 
 .contato-lojas h3::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 0.75rem;
   height: 0.5rem;
@@ -76,12 +76,13 @@
 }
 
 .contato-lojas-funcionamento span::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  background-image: url(../../img/icons/icons-contato/horario.svg);
+  background-image: url(../img/icons/icons-contato/horario.svg);
 }
+
 .contato-lojas-funcionamento {
   grid-column: 1 / -1;
   padding-left: 2rem;
@@ -91,7 +92,7 @@
 /* estilo de interação com o script para indicar ao usuário
    quando a loja está aberta ou fechado */
 .contato-lojas-funcionamento span::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;

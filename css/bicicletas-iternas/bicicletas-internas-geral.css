@@ -102,7 +102,7 @@
 
 /* estilo padrão do ícone de cada h2 */
 .bicicletas-internas-informacoes-itens h2::before {
-  content: "";
+  content: '';
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -112,19 +112,19 @@
 
 /* ícone referente ao seu h2 */
 .bicicletas-internas-informacoes-itens li:nth-of-type(1) h2::before {
-  background-image: url(../../img/icons/bicicletas-especific/eletrica.svg);
+  background-image: url(../img/icons/bicicletas-especific/eletrica.svg);
 }
 
 .bicicletas-internas-informacoes-itens li:nth-of-type(2) h2::before {
-  background-image: url(../../img/icons/bicicletas-especific/velocidade.svg);
+  background-image: url(../img/icons/bicicletas-especific/velocidade.svg);
 }
 
 .bicicletas-internas-informacoes-itens li:nth-of-type(3) h2::before {
-  background-image: url(../../img/icons/bicicletas-especific/rastreador.svg);
+  background-image: url(../img/icons/bicicletas-especific/rastreador.svg);
 }
 
 .bicicletas-internas-informacoes-itens li:nth-of-type(4) h2::before {
-  background-image: url(../../img/icons/bicicletas-especific/carbono.svg);
+  background-image: url(../img/icons/bicicletas-especific/carbono.svg);
 }
 
 /* o texto das informações da bicicleta */
